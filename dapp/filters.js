@@ -90,15 +90,15 @@
           if (casted.gt(0)) {
             var ether = casted.div('1e18');
             if (ether.gt(1)) {
-              return ether.toPrecision(Math.floor(Math.log(ether.toNumber())/Math.log(10) + 3)).toString(10) + " ETH";
+              return ether.toPrecision(Math.floor(Math.log(ether.toNumber())/Math.log(10) + 3)).toString(10) + " XSM";
             }
             else {
-              return ether.toPrecision(2).toString() + " ETH";
+              return ether.toPrecision(2).toString() + " XSM";
             }
 
           }
           else {
-            return "0.00 ETH";
+            return "0.00 XSM";
           }
         }
         return null;

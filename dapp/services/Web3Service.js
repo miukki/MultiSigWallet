@@ -17,13 +17,13 @@
       });
 
       /**
-      * Asks Metamask to open its widget.
+      * Asks Smilowallet to open its widget.
       * Returns a callback call with the list of accounts or null in case the
       * user rejects the approval request.
       * @param callback, function (error, accounts)
       */
-      factory.enableMetamask = function (callback) {
-        $window.ethereum.enable().then(function (accounts) {
+      factory.enableSmiloWallet = function (callback) {
+        $window.smilo.enable().then(function (accounts) {
           factory.reloadWeb3Provider(null, callback);
           // Set accounts and coinbase
           factory.accounts = accounts;
@@ -35,11 +35,11 @@
       };
 
       /**
-      * Returns true if metamask is injected, false otherwise
+      * Returns true if smilowallet is injected, false otherwise
       **/
-      factory.isMetamaskInjected = function () {
+      factory.isSmiloWalletInjected = function () {
         return window && (typeof window.web3 !== 'undefined' &&
-          (window.web3.currentProvider.constructor.name === 'MetamaskInpageProvider' || window.web3.currentProvider.isMetaMask)
+          (window.web3.currentProvider.constructor.name === 'MetamaskInpageProvider' || window.web3.currentProvider.isSmiloWallet)
         );
       };
 
@@ -55,13 +55,14 @@
         var web3 = null;
 
         // Legacy dapp browsers...
-        if ($window.web3 && !$window.ethereum) {
-          web3 = $window.web3;
-        }
+        // if ($window.web3 && !$window.ethereum) {
+        //   web3 = $window.web3;
+        // }
         // TODO: figure out whether Metamask standardize isEnabled() or find out
         // another way to manage it
-        else if ($window.ethereum && window.ethereum._metamask.isEnabled()) {
-          web3 = $window.ethereum;
+        // else
+          if ($window.smilo && window.smilo._smiloWalletExtension.isEnabled()) {
+          web3 = $window.smilo;
         }
 
         // Ledger wallet

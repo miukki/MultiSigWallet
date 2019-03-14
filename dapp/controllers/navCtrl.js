@@ -6,7 +6,7 @@
       $scope.navCollapsed = true;
       $scope.isElectron = isElectron;
       $scope.config = Config.getConfiguration();
-      $scope.metamaskInjected = Web3Service.isMetamaskInjected();
+      $scope.smilowalletInjected = Web3Service.isSmiloWalletInjected();
       $scope.web3ProviderName = null;
 
       // Reload config when it changes
@@ -93,9 +93,9 @@
       /**
       * Opens Metamask widget and asks the user to allow the DApp accessing the accounts
       */
-      $scope.openMetamaskWidget = function (resolve, reject) {
+      $scope.openSmiloWalletWidget = function (resolve, reject) {
         // Ask to reload provider, it takes care of re-ejecuting metamask checks.
-        Web3Service.enableMetamask(function (error) {
+        Web3Service.enableSmiloWallet(function (error) {
           if (error && reject) {
             $scope.loggedIn = false;
             reject();
@@ -241,10 +241,10 @@
                     $uibModalInstance.close();
                   };
 
-                  $scope.metamaskInjected = Web3Service.isMetamaskInjected();
+                  $scope.smilowalletInjected = Web3Service.isSmiloWalletInjected();
 
                   $scope.openMetamaskWidgetAndClose = function () {
-                    $scope.openMetamaskWidget(function () {
+                    $scope.openSmiloWalletWidget(function () {
                       $scope.ok();
                     }, function () {
                       // DO nothing, user rejected unlocking Metamask

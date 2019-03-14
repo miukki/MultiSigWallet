@@ -36,11 +36,8 @@
           function (data) {
             var factoryAddress;
 
-            if (data.chain == 'kovan') {
-              factoryAddress = $scope.config.walletFactoryAddresses['kovan'];
-            }
-            else if (data.chain == 'ropsten') {
-              factoryAddress = $scope.config.walletFactoryAddresses['ropsten'];
+            if (data.chain == 'testnet') {
+              factoryAddress = $scope.config.walletFactoryAddresses['testnet'];
             }
             else if (data.chain == 'privatenet') {
               factoryAddress = $scope.config.walletFactoryAddresses['privatenet'];

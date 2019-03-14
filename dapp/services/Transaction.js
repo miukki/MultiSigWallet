@@ -305,29 +305,19 @@
                 if (e) {
                   reject();
                 }
-                else if (block && block.hash == "0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3") {
+                else if (block && block.hash == "0xe6ff29360c8524bfc8a07a07f1804bc6a81643a3d00e9320686de4055f713c3b") {
                   data.chain = "mainnet";
-                  data.etherscan = "https://etherscan.io";
+                  data.etherscan = "https://explorer.smilo.network";
                   data.walletFactoryAddress = txDefault.walletFactoryAddresses["mainnet"].address;
                 }
-                else if (block && block.hash == "0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d") {
-                  data.chain = "ropsten";
-                  data.etherscan = "https://ropsten.etherscan.io";
-                  data.walletFactoryAddress = txDefault.walletFactoryAddresses["ropsten"].address;
-                }
-                else if (block && block.hash == "0xa3c565fc15c7478862d50ccd6561e3c06b24cc509bf388941c25ea985ce32cb9") {
-                  data.chain = "kovan";
-                  data.etherscan = "https://kovan.etherscan.io";
-                  data.walletFactoryAddress = txDefault.walletFactoryAddresses["kovan"].address;
-                }
-                else if (block && block.hash == "0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177") {
-                  data.chain = "rinkeby";
-                  data.etherscan = "https://rinkeby.etherscan.io";
-                  data.walletFactoryAddress = txDefault.walletFactoryAddresses["rinkeby"].address;
+                else if (block && block.hash == "0x853e0fbdc73a57c3f74b5716ce778fe0dd45025d00c3f016b9cc33bac7b0d92e") {
+                  data.chain = "testnet";
+                  data.etherscan = "https://testnet-explorer.smilo.network";
+                  data.walletFactoryAddress = txDefault.walletFactoryAddresses["testnet"].address;
                 }
                 else {
                   data.chain = "privatenet";
-                  data.etherscan = "https://testnet.etherscan.io";
+                  data.etherscan = "https://testnet-explorer.smilo.network";
                   data.walletFactoryAddress = txDefault.walletFactoryAddresses["privatenet"].address;
                 }
 
