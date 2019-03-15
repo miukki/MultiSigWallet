@@ -1,7 +1,5 @@
 var HDWalletProvider = require("truffle-hdwallet-provider");
-
-var mnemonic = "miracle globe install spoon stuff cousin help april top couch then cheese";
-
+require('dotenv').config({ path: ".env" });
 
 module.exports = {
     networks: {
@@ -14,9 +12,17 @@ module.exports = {
         },
         testnet: {
             provider: () =>
-                new HDWalletProvider(mnemonic, "https://testnet-wallet.smilo.network/api", 0, 5, "m/44'/20080914'/0'/0/"),
+                new HDWalletProvider(process.env.MNEMONIC_TESTNET, "https://testnet-wallet.smilo.network/api", 0, 5, "m/44'/20080914'/0'/0/"),
             port: 443,
             network_id: "10", // Match network id
+            gas: 4712388,
+            gasPrice: 10000000, // 0,01 gwei
+        },
+        mainnet: {
+            provider: () =>
+                new HDWalletProvider(process.env.MNEMONIC_MAINNET, "https://api.smilo.network", 0, 5, "m/44'/20080914'/0'/0/"),
+            port: 443,
+            network_id: "20080914", // Match network id
             gas: 4712388,
             gasPrice: 10000000, // 0,01 gwei
         }
