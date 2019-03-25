@@ -78,3 +78,5 @@ dapp/localhost.key
 
 #dotenv
 .env
+
+dapp/css/gnosis-bootstrap.css
