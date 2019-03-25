@@ -8,7 +8,10 @@
 @smilo-dark-blue: #032B3F;
 @smilo-darker-blue: darken(@smilo-dark-blue, 20%);
 @smilo-grey: #EDEDED;
-@smilo-light-grey: lighten(@smilo-grey, 20%);
+@smilo-dark-grey: darken(@smilo-grey, 5%);
+@smilo-darker-grey: darken(@smilo-grey, 10%);
+@smilo-light-grey: lighten(@smilo-grey, 5%);
+@smilo-lighter-grey: lighten(@smilo-grey, 10%);
 
 @gnosis-extreme-dark-blue:     @smilo-blue;
 @gnosis-very-dark-blue:        red;
@@ -29,7 +32,7 @@
 
 // Links & Text
 @gnosis-text-color:                     @smilo-dark-blue;
-@gnosis-link-color: @gnosis-extreme-light-blue;
+@gnosis-link-color: @smilo-white;
 @gnosis-link-hover-color: @gnosis-ultra-light-blue;
 
 // Button
@@ -47,10 +50,10 @@
 @gnosis-input-bg-disabled: @smilo-grey;
 
 // Dropdown
-@gnosis-dropdown-bg: @gnosis-very-dark-blue;
+@gnosis-dropdown-bg: @smilo-dark-blue;
 @gnosis-dropdown-link-color:       @gnosis-link-color;
-@gnosis-dropdown-link-hover-color: @gnosis-ultra-light-blue;
-@gnosis-dropdown-link-hover-bg: @gnosis-light-blue;
+@gnosis-dropdown-link-hover-color: @smilo-white;
+@gnosis-dropdown-link-hover-bg: @smilo-blue;
 
 // Modal
 @gnosis-modal-content-bg:          @smilo-white;
@@ -58,7 +61,7 @@
 
 // Nav
 @gnosis-navbar-default-color:       @gnosis-light-grey;
-@gnosis-navbar-default-bg: @gnosis-very-dark-blue;
+@gnosis-navbar-default-bg: @smilo-dark-blue;
 @gnosis-navbar-default-border:      @gnosis-light-blue;
 
 // Navbar links
@@ -76,8 +79,8 @@
 
 // Table
 @gnosis-table-bg:                       transparent;
-@gnosis-table-bg-accent: @smilo-dark-blue;
-@gnosis-table-bg-hover: @smilo-darker-blue;
+@gnosis-table-bg-accent: @smilo-light-grey;
+@gnosis-table-bg-hover: @smilo-grey;
 @gnosis-table-bg-active: @gnosis-table-bg-hover;
 @gnosis-table-border-color: @smilo-grey;
 
@@ -453,8 +456,8 @@
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 @navbar-default-link-color:                @smilo-white;
-@navbar-default-link-hover-color:          @smilo-blue;
-@navbar-default-link-active-color:         @smilo-blue;
+@navbar-default-link-hover-color:          @smilo-dark-grey;
+@navbar-default-link-active-color:         @smilo-white;
 
 // Navbar brand label
 @navbar-default-brand-color:               @navbar-default-link-color;
