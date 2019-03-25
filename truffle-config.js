@@ -5,6 +5,15 @@ var mnemonic = "miracle globe install spoon stuff cousin help april top couch th
 
 module.exports = {
     networks: {
+        // Another network with more advanced options...
+        localhost: {
+            host: "localhost",     // Localhost (default: none)
+            port: 22000,            // Standard Ethereum port (default: none)
+            network_id: "10",       // Any network (default: none)
+            gas: 4712387,
+            gasPrice: 10000000,  // 20 gwei (in wei) (default: 1 gwei)
+            from: "0xecf7e57d01d3d155e5fc33dbc7a58355685ba39c"        // Account to send txs from (default: accounts[0])
+        },
         development: {
             host: "localhost",
             port: 8545,

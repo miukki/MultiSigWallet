@@ -44,7 +44,7 @@ var txDefault = {
       name: "Smilo Testnet"
     },
     {
-      url : "http://localhost:8545",
+      url : "http://localhost:22000",
       name: "Local node"
     }
   ],
@@ -55,11 +55,15 @@ var txDefault = {
     },
     'testnet': {
       name: 'Testnet',
-      address: '0xd5112e208D79BF745209938b6f0Ab5cBaa4703A4'
+      address: '0x45b5F368a8c9Cfe9eb06A3E21A86eC4beF865dFe'
     },
     'privatenet': {
       name: 'Privatenet',
       address: '0x4545bd298eEEaB88EE42068Cd6b7482F0C052AcD'
+    },
+    'localhost': {
+      name: 'Localhost',
+      address: '0x5d2B69E1311C1bb6F3e662bd19f4770447195E4e'
     }
   }
 };
