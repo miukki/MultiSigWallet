@@ -80,3 +80,4 @@ dapp/localhost.key
 .env
 
 dapp/css/gnosis-bootstrap.css
+dist

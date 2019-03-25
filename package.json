@@ -3,6 +3,7 @@
   "version": "1.4.1",
   "description": "Main module, for installing all dependencies",
   "scripts": {
+    "build": "cd dapp && npm run build",
     "test-dapp": "cd dapp && npm test",
     "test": "sh truffle_test_runner.sh",
     "install": "cd dapp && npm install",
