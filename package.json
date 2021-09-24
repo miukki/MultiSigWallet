@@ -6,7 +6,9 @@
     "test-dapp": "cd dapp && npm test",
     "test": "sh truffle_test_runner.sh",
     "install": "cd dapp && npm install",
-    "start": "cd dapp && npm start"
+    "start": "cd dapp && npm start",
+    "deploy:factory_smilo": "DEPLOY_FACTORY=true truffle migrate --network",
+    "deploy:smilo": "truffle deploy --network smilo"
   },
   "repository": {
     "type": "git",

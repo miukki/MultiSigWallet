@@ -10,20 +10,12 @@ module.exports = {
             gas: 4712388,
             gasPrice: 10000000, // 0,01 gwei
         },
-        testnet: {
-            provider: () =>
-                new HDWalletProvider(process.env.MNEMONIC_TESTNET, "https://testnet-wallet.smilo.network/api", 0, 5, "m/44'/20080914'/0'/0/"),
-            port: 443,
-            network_id: "10", // Match network id
-            gas: 4712388,
-            gasPrice: 10000000, // 0,01 gwei
-        },
         mainnet: {
             provider: () =>
-                new HDWalletProvider(process.env.MNEMONIC_MAINNET, "https://api.smilo.network", 0, 5, "m/44'/20080914'/0'/0/"),
+                new HDWalletProvider(process.env.MNEMONIC_MAINNET, "https://api.smilo.foundation", 0, 5, "m/44'/20080914'/0'/0/"),
             port: 443,
             network_id: "20080914", // Match network id
-            gas: 4712388,
+            gas: 4712387,
             gasPrice: 10000000, // 0,01 gwei
         }
     },
